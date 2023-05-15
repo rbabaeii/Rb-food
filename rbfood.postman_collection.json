@@ -1,0 +1,4029 @@
+{
+	"info": {
+		"_postman_id": "f91fa069-6eab-4be1-ba5b-e569c17afca5",
+		"name": "rpfood",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "reza",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "1",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/token/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"token",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "reza",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "1",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/token/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"token",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 09 Feb 2023 13:06:55 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "582"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY3NjAzNDQxNSwiaWF0IjoxNjc1OTQ4MDE1LCJqdGkiOiJlOTEwNmFiZTBhODQ0MDI1OGEzOGI2NjhlNzhkMTJlNSIsInVzZXJfaWQiOiJmNjhlMzgzYy0zMjVkLTQ3MDktODJlMi05NWNmYmNmM2FlYWUifQ.LzAdMCRxMVLekRtYQAH0nOl1pOnzXEIYlFYB_yI_kII\",\n    \"access\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc1OTQ4MzE1LCJpYXQiOjE2NzU5NDgwMTUsImp0aSI6IjZkNTVmNTMxNmYyMTQ5ZTNiOGM0ODcxNTFiOTljZDNhIiwidXNlcl9pZCI6ImY2OGUzODNjLTMyNWQtNDcwOS04MmUyLTk1Y2ZiY2YzYWVhZSJ9.bLYxDKAABLVIPwPQfPGd9TewBVRTS5qJizZwDZKxzaA\"\n}"
+				}
+			]
+		},
+		{
+			"name": "refresh token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "refresh",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY3NjgwMDQxNSwiaWF0IjoxNjc2NzE0MDE1LCJqdGkiOiI3YTkzMjk5ODhiODk0ZTUxYWMxZWZjNGY0YTc2YzQ1MSIsInVzZXJfaWQiOiJmNjhlMzgzYy0zMjVkLTQ3MDktODJlMi05NWNmYmNmM2FlYWUifQ.YpaKMenGZviiEmBrh7O9CzWUAMuwFZh1a3UEs1yc4-4",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/token/refresh/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"token",
+						"refresh",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "refresh token",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "refresh",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY3NjAzNDQxNSwiaWF0IjoxNjc1OTQ4MDE1LCJqdGkiOiJlOTEwNmFiZTBhODQ0MDI1OGEzOGI2NjhlNzhkMTJlNSIsInVzZXJfaWQiOiJmNjhlMzgzYy0zMjVkLTQ3MDktODJlMi05NWNmYmNmM2FlYWUifQ.LzAdMCRxMVLekRtYQAH0nOl1pOnzXEIYlFYB_yI_kII",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/token/refresh/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"token",
+								"refresh",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 09 Feb 2023 13:18:54 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "290"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"access\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc1OTQ5MDM0LCJpYXQiOjE2NzU5NDgwMTUsImp0aSI6ImVlOWYwOGM0ZjZjYzQxNDliYTJjZThlZDkxY2M3ZTEyIiwidXNlcl9pZCI6ImY2OGUzODNjLTMyNWQtNDcwOS04MmUyLTk1Y2ZiY2YzYWVhZSJ9.BS68qkqwQCMcq5GcbufN-nyauQjEJdym9k0S3QxN3Kc\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Category List",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc1OTUxMjMwLCJpYXQiOjE2NzU5NDgwMTUsImp0aSI6ImQ5NWUxODc4ZmE0ZjQxM2ViZTE5MDRlMjYzNjNhNDUyIiwidXNlcl9pZCI6ImY2OGUzODNjLTMyNWQtNDcwOS04MmUyLTk1Y2ZiY2YzYWVhZSJ9.dKBfSUzvqckqMXQgoqu8Davbrh8QvL7lVWUR_D0CNdI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/category/list/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"category",
+						"list",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Category List",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/category/list/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"category",
+								"list",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 09 Feb 2023 13:45:51 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "109"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"name\": \"reza\",\n        \"parent\": null,\n        \"depth\": 1,\n        \"image\": null\n    },\n    {\n        \"name\": \"test\",\n        \"parent\": \"reza\",\n        \"depth\": 2,\n        \"image\": null\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Category Detail",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc1OTUwNjMyLCJpYXQiOjE2NzU5NDgwMTUsImp0aSI6IjRmOTg0YTYyYjY1MTQ3NzY4YTNkZjViYTg3ZTczNGJmIiwidXNlcl9pZCI6ImY2OGUzODNjLTMyNWQtNDcwOS04MmUyLTk1Y2ZiY2YzYWVhZSJ9.SFaRMRy1CRNtbBCPq53BLmQxLQTfdf5_DZR-Xfml-AQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/category/detail/a2cce55d-0ccc-4b0b-8429-8f95727768ea/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"category",
+						"detail",
+						"a2cce55d-0ccc-4b0b-8429-8f95727768ea",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Category Detail",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/category/detail/a2cce55d-0ccc-4b0b-8429-8f95727768ea/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"category",
+								"detail",
+								"a2cce55d-0ccc-4b0b-8429-8f95727768ea",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 09 Feb 2023 13:48:24 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "86"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"test\",\n    \"parent\": \"f35b0264-9233-4ccd-9c8d-464b6f6192e7\",\n    \"depth\": 2,\n    \"image\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "Category Update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc1OTUxMDA2LCJpYXQiOjE2NzU5NDgwMTUsImp0aSI6IjdlOGM2NmMzMGNlYzRjZmU5ZTNhYjQxMmUwYjhmNDEwIiwidXNlcl9pZCI6ImY2OGUzODNjLTMyNWQtNDcwOS04MmUyLTk1Y2ZiY2YzYWVhZSJ9.EWpz8oF3STqTNKORJtu76gGQqKo-uYrFLFgYGeICBU0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "new",
+							"type": "default"
+						},
+						{
+							"key": "depth",
+							"value": "2",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/category/detail/a2cce55d-0ccc-4b0b-8429-8f95727768ea/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"category",
+						"detail",
+						"a2cce55d-0ccc-4b0b-8429-8f95727768ea",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Category Update",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "new",
+									"type": "default"
+								},
+								{
+									"key": "depth",
+									"value": "2",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/category/detail/a2cce55d-0ccc-4b0b-8429-8f95727768ea/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"category",
+								"detail",
+								"a2cce55d-0ccc-4b0b-8429-8f95727768ea",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 09 Feb 2023 13:52:56 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "85"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"new\",\n    \"parent\": \"f35b0264-9233-4ccd-9c8d-464b6f6192e7\",\n    \"depth\": 2,\n    \"image\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "Category Delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc1OTUxMDA2LCJpYXQiOjE2NzU5NDgwMTUsImp0aSI6IjdlOGM2NmMzMGNlYzRjZmU5ZTNhYjQxMmUwYjhmNDEwIiwidXNlcl9pZCI6ImY2OGUzODNjLTMyNWQtNDcwOS04MmUyLTk1Y2ZiY2YzYWVhZSJ9.EWpz8oF3STqTNKORJtu76gGQqKo-uYrFLFgYGeICBU0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/category/detail/a2cce55d-0ccc-4b0b-8429-8f95727768ea/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"category",
+						"detail",
+						"a2cce55d-0ccc-4b0b-8429-8f95727768ea",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Category Delete",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/category/detail/a2cce55d-0ccc-4b0b-8429-8f95727768ea/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"category",
+								"detail",
+								"a2cce55d-0ccc-4b0b-8429-8f95727768ea",
+								""
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 09 Feb 2023 13:54:41 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.6"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Create Store",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc2Mjg1ODQzLCJpYXQiOjE2NzYyODMxNDcsImp0aSI6IjAyZTk0Mjk1NDIwMzQyMTU5MWZkOTVkMmYxMzZlZjMxIiwidXNlcl9pZCI6ImY2OGUzODNjLTMyNWQtNDcwOS04MmUyLTk1Y2ZiY2YzYWVhZSJ9.T4J-zVb7UJHYgpre8tD1QchCPL3gGp1_o54tLbVruTo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "city",
+							"value": "arak",
+							"type": "default"
+						},
+						{
+							"key": "store_name",
+							"value": "Test Store",
+							"type": "default"
+						},
+						{
+							"key": "store_phone",
+							"value": "0862222",
+							"type": "default"
+						},
+						{
+							"key": "category",
+							"value": "f35b0264-9233-4ccd-9c8d-464b6f6192e7",
+							"type": "default"
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/store/create/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"store",
+						"create",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create Store",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "city",
+									"value": "arak",
+									"type": "default"
+								},
+								{
+									"key": "store_name",
+									"value": "Test Store",
+									"type": "default"
+								},
+								{
+									"key": "store_phone",
+									"value": "0862222",
+									"type": "default"
+								},
+								{
+									"key": "category",
+									"value": "f35b0264-9233-4ccd-9c8d-464b6f6192e7",
+									"type": "default"
+								},
+								{
+									"key": "location",
+									"value": "d85580ee-ed33-4aef-badc-d4085bc3b15c",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/store/create/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"store",
+								"create",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 13 Feb 2023 10:56:50 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "315"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"0017879d-3602-46c3-b68d-48b222975a42\",\n    \"created_at\": \"2023-02-13T10:56:50.823794Z\",\n    \"updated_at\": \"2023-02-13T10:56:50.823874Z\",\n    \"city\": \"arak\",\n    \"store_name\": \"Test Store\",\n    \"store_phone\": \"0862222\",\n    \"is_verified\": false,\n    \"location\": \"d85580ee-ed33-4aef-badc-d4085bc3b15c\",\n    \"category\": \"f35b0264-9233-4ccd-9c8d-464b6f6192e7\"\n}"
+				}
+			]
+		},
+		{
+			"name": "list store",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc2NDU4MTY5LCJpYXQiOjE2NzYzODQyMjcsImp0aSI6ImY4MmExMTkxODk4MDQ3OWVhZjExMWU0MDkzNTZhZWM2IiwidXNlcl9pZCI6ImY2OGUzODNjLTMyNWQtNDcwOS04MmUyLTk1Y2ZiY2YzYWVhZSJ9.gfyorZH_7KGLuoyWNr-umW53iqOK55Fgw73n8In3DnA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/store/list/arak/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"store",
+						"list",
+						"arak",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "list store",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/store/list/arak/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"store",
+								"list",
+								"arak",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 18 Feb 2023 10:29:16 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "613"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"21424371-8c5b-4e11-a6dd-92304345fee8\",\n        \"owner\": \"reza\",\n        \"location\": null,\n        \"created_at\": \"2023-02-13T12:17:30.826840Z\",\n        \"updated_at\": \"2023-02-13T12:17:30.826918Z\",\n        \"city\": \"arak\",\n        \"store_name\": \"Test Store\",\n        \"store_phone\": \"0862222\",\n        \"is_verified\": false,\n        \"category\": \"f35b0264-9233-4ccd-9c8d-464b6f6192e7\"\n    },\n    {\n        \"id\": \"3379828f-2c11-4edd-8634-9cf881b0d79b\",\n        \"owner\": \"admin\",\n        \"location\": {\n            \"lat\": 0.000003,\n            \"long\": 0.000004\n        },\n        \"created_at\": \"2023-02-13T12:41:54.806925Z\",\n        \"updated_at\": \"2023-02-15T10:59:34.790386Z\",\n        \"city\": \"arak\",\n        \"store_name\": \"update\",\n        \"store_phone\": \"0918222\",\n        \"is_verified\": true,\n        \"category\": \"f35b0264-9233-4ccd-9c8d-464b6f6192e7\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "detail store",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc2NDU4MTY5LCJpYXQiOjE2NzYzODQyMjcsImp0aSI6ImY4MmExMTkxODk4MDQ3OWVhZjExMWU0MDkzNTZhZWM2IiwidXNlcl9pZCI6ImY2OGUzODNjLTMyNWQtNDcwOS04MmUyLTk1Y2ZiY2YzYWVhZSJ9.gfyorZH_7KGLuoyWNr-umW53iqOK55Fgw73n8In3DnA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/store/detail/3379828f-2c11-4edd-8634-9cf881b0d79b/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"store",
+						"detail",
+						"3379828f-2c11-4edd-8634-9cf881b0d79b",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "detail store",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/store/detail/3379828f-2c11-4edd-8634-9cf881b0d79b/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"store",
+								"detail",
+								"3379828f-2c11-4edd-8634-9cf881b0d79b",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 15 Feb 2023 10:46:13 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "309"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"3379828f-2c11-4edd-8634-9cf881b0d79b\",\n    \"owner\": \"admin\",\n    \"location\": {\n        \"lat\": 0.000003,\n        \"long\": 0.000004\n    },\n    \"created_at\": \"2023-02-13T12:41:54.806925Z\",\n    \"updated_at\": \"2023-02-13T12:41:54.806985Z\",\n    \"city\": \"sas\",\n    \"store_name\": \"ass\",\n    \"store_phone\": \"12222\",\n    \"is_verified\": false,\n    \"category\": \"f35b0264-9233-4ccd-9c8d-464b6f6192e7\"\n}"
+				}
+			]
+		},
+		{
+			"name": "update store",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc2NDU4NTY3LCJpYXQiOjE2NzYzODQyMjcsImp0aSI6IjI1YzM2YmQyZDcxODRjZTk4M2E2NmZhNWY4MTQyZjBlIiwidXNlcl9pZCI6ImY2OGUzODNjLTMyNWQtNDcwOS04MmUyLTk1Y2ZiY2YzYWVhZSJ9.N4ac7Yz-AewjlLN20ySwGsuwH7zS6-V03NDcTKla2uc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "city",
+							"value": "arak",
+							"type": "default"
+						},
+						{
+							"key": "store_name",
+							"value": "update",
+							"type": "default"
+						},
+						{
+							"key": "store_phone",
+							"value": "0918222",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/store/update/3379828f-2c11-4edd-8634-9cf881b0d79b/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"store",
+						"update",
+						"3379828f-2c11-4edd-8634-9cf881b0d79b",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "update store",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "city",
+									"value": "arak",
+									"type": "default"
+								},
+								{
+									"key": "store_name",
+									"value": "update",
+									"type": "default"
+								},
+								{
+									"key": "store_phone",
+									"value": "0918222",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/store/update/3379828f-2c11-4edd-8634-9cf881b0d79b/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"store",
+								"update",
+								"3379828f-2c11-4edd-8634-9cf881b0d79b",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 15 Feb 2023 10:51:24 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "PUT, PATCH, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "358"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"3379828f-2c11-4edd-8634-9cf881b0d79b\",\n    \"created_at\": \"2023-02-13T12:41:54.806925Z\",\n    \"updated_at\": \"2023-02-15T10:51:24.653312Z\",\n    \"city\": \"arak\",\n    \"store_name\": \"update\",\n    \"store_phone\": \"0918222\",\n    \"is_verified\": false,\n    \"owner\": \"8620880c-9f3d-4cf1-af2c-94a650307fc5\",\n    \"location\": \"d85580ee-ed33-4aef-badc-d4085bc3b15c\",\n    \"category\": \"f35b0264-9233-4ccd-9c8d-464b6f6192e7\"\n}"
+				}
+			]
+		},
+		{
+			"name": "verify store",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc2NDU4OTIxLCJpYXQiOjE2NzYzODQyMjcsImp0aSI6ImU5NzhjMWZhNDY4YTRjNjc5NjhhM2M2YjAwMTc1YzZhIiwidXNlcl9pZCI6ImY2OGUzODNjLTMyNWQtNDcwOS04MmUyLTk1Y2ZiY2YzYWVhZSJ9.XpEhhkaqbK51XwFtSr5yku92TSo0MsMcQP3qQBX1i_g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "is_verified",
+							"value": "True",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/store/verify/3379828f-2c11-4edd-8634-9cf881b0d79b/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"store",
+						"verify",
+						"3379828f-2c11-4edd-8634-9cf881b0d79b",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "verify store",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "is_verified",
+									"value": "True",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/store/verify/3379828f-2c11-4edd-8634-9cf881b0d79b/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"store",
+								"verify",
+								"3379828f-2c11-4edd-8634-9cf881b0d79b",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 15 Feb 2023 10:59:34 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "PUT, PATCH, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "357"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"3379828f-2c11-4edd-8634-9cf881b0d79b\",\n    \"created_at\": \"2023-02-13T12:41:54.806925Z\",\n    \"updated_at\": \"2023-02-15T10:59:34.790386Z\",\n    \"city\": \"arak\",\n    \"store_name\": \"update\",\n    \"store_phone\": \"0918222\",\n    \"is_verified\": true,\n    \"owner\": \"8620880c-9f3d-4cf1-af2c-94a650307fc5\",\n    \"location\": \"d85580ee-ed33-4aef-badc-d4085bc3b15c\",\n    \"category\": \"f35b0264-9233-4ccd-9c8d-464b6f6192e7\"\n}"
+				}
+			]
+		},
+		{
+			"name": "add Store Document",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc2MjkwOTEzLCJpYXQiOjE2NzYyODMxNDcsImp0aSI6IjA4NTZjNTg0ZmE2YzQyYTFhMTRlMzJlZjI3NGVjMjhjIiwidXNlcl9pZCI6ImY2OGUzODNjLTMyNWQtNDcwOS04MmUyLTk1Y2ZiY2YzYWVhZSJ9.S99hkQc3Zn6KDZ2-iqqbcldoKAtDU24vtPCnupBA1Qk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "menu_img",
+							"value": "74607bdb-903a-4421-8756-02c02701cc76",
+							"type": "default"
+						},
+						{
+							"key": "working_hours",
+							"value": "{\"OPEN\":\"12:00\",\n\"close\":\"15:00\"}",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/store/add/documents/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"store",
+						"add",
+						"documents",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "add Store Document",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "menu_img",
+									"value": "74607bdb-903a-4421-8756-02c02701cc76",
+									"type": "default"
+								},
+								{
+									"key": "working_hours",
+									"value": "{\"OPEN\":\"12:00\",\n\"close\":\"15:00\"}",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/store/add/documents/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"store",
+								"add",
+								"documents",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 13 Feb 2023 12:17:37 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "283"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"b3a81132-a672-4168-b46a-d34a15733176\",\n    \"created_at\": \"2023-02-13T12:17:37.504527Z\",\n    \"updated_at\": \"2023-02-13T12:17:37.504584Z\",\n    \"working_hours\": {\n        \"OPEN\": \"12:00\",\n        \"close\": \"15:00\"\n    },\n    \"national_card_img\": null,\n    \"business_lisence_img\": null,\n    \"menu_img\": \"74607bdb-903a-4421-8756-02c02701cc76\"\n}"
+				}
+			]
+		},
+		{
+			"name": "List Store Document",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc2MzAwODM2LCJpYXQiOjE2NzYyODMxNDcsImp0aSI6IjQ2NzQzYzJjOTNmYTRjMWNiNzU1MGRkM2EzYWVjOGEzIiwidXNlcl9pZCI6ImY2OGUzODNjLTMyNWQtNDcwOS04MmUyLTk1Y2ZiY2YzYWVhZSJ9.6CN0qNFNgcIo9T0FiVfVK0tQKbY7jvSifkjaKJoss2g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/list/documents/3379828f-2c11-4edd-8634-9cf881b0d79b/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"list",
+						"documents",
+						"3379828f-2c11-4edd-8634-9cf881b0d79b",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "List Store Document",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/list/documents/3379828f-2c11-4edd-8634-9cf881b0d79b/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"list",
+								"documents",
+								"3379828f-2c11-4edd-8634-9cf881b0d79b",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 13 Feb 2023 15:02:43 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "297"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"38cee684-ea98-4e66-aa61-4d2b76a740a9\",\n    \"store\": \"ass\",\n    \"created_at\": \"2023-02-13T15:01:32.800321Z\",\n    \"updated_at\": \"2023-02-13T15:01:32.800395Z\",\n    \"working_hours\": {\n        \"OPEN\": \"12:00\",\n        \"close\": \"15:00\"\n    },\n    \"national_card_img\": null,\n    \"business_lisence_img\": null,\n    \"menu_img\": \"74607bdb-903a-4421-8756-02c02701cc76\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Store Documents",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc2MzAxOTA3LCJpYXQiOjE2NzYzMDE2MDcsImp0aSI6ImE4NmUzMDZlYjY3MjQwYjdhNzE3MzFjZDRhM2M4NjBhIiwidXNlcl9pZCI6Ijg2MjA4ODBjLTlmM2QtNGNmMS1hZjJjLTk0YTY1MDMwN2ZjNSJ9.X2Eb0b9XZOzkyejWiY7Ur_3Cb7VF4UeyRR3v2ywze4c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "working_hours",
+							"value": "{\"open\":\"08:00\",\n\"close\":\"21:00\"}",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/update/documents/3379828f-2c11-4edd-8634-9cf881b0d79b/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"update",
+						"documents",
+						"3379828f-2c11-4edd-8634-9cf881b0d79b",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update Store Documents",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "working_hours",
+									"value": "{\"open\":\"08:00\",\n\"close\":\"21:00\"}",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/update/documents/3379828f-2c11-4edd-8634-9cf881b0d79b/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"update",
+								"documents",
+								"3379828f-2c11-4edd-8634-9cf881b0d79b",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 13 Feb 2023 15:21:43 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, PATCH, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "297"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"38cee684-ea98-4e66-aa61-4d2b76a740a9\",\n    \"store\": \"ass\",\n    \"created_at\": \"2023-02-13T15:01:32.800321Z\",\n    \"updated_at\": \"2023-02-13T15:21:43.535332Z\",\n    \"working_hours\": {\n        \"open\": \"08:00\",\n        \"close\": \"21:00\"\n    },\n    \"national_card_img\": null,\n    \"business_lisence_img\": null,\n    \"menu_img\": \"74607bdb-903a-4421-8756-02c02701cc76\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Add Food",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc2MzkwMTM2LCJpYXQiOjE2NzYzODQyMjcsImp0aSI6IjY4ZjVjNzA0YjE1MzQxODQ4NGNkM2NhYjg0ZGZmOTBkIiwidXNlcl9pZCI6ImY2OGUzODNjLTMyNWQtNDcwOS04MmUyLTk1Y2ZiY2YzYWVhZSJ9.dRMO_mHJ0Rhlupcu_u9e9k_L4pYSOWGVn9X3TSt9K6g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "pizza",
+							"type": "default"
+						},
+						{
+							"key": "contents",
+							"value": "test",
+							"type": "default"
+						},
+						{
+							"key": "price",
+							"value": "60000",
+							"type": "default"
+						},
+						{
+							"key": "img",
+							"value": "ff7fce8b-8ccc-400b-aec0-f07a6ae0c5ca",
+							"type": "default"
+						},
+						{
+							"key": "store",
+							"value": "3379828f-2c11-4edd-8634-9cf881b0d79b",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/food/add/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"food",
+						"add",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add Food",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "pizza",
+									"type": "default"
+								},
+								{
+									"key": "contents",
+									"value": "test",
+									"type": "default"
+								},
+								{
+									"key": "price",
+									"value": "60000",
+									"type": "default"
+								},
+								{
+									"key": "img",
+									"value": "74607bdb-903a-4421-8756-02c02701cc76",
+									"type": "default"
+								},
+								{
+									"key": "store",
+									"value": "3379828f-2c11-4edd-8634-9cf881b0d79b",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/food/add/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"food",
+								"add",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 14 Feb 2023 14:20:51 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "270"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"6dfada9a-f396-4c86-a1d1-d79e49a19678\",\n    \"created_at\": \"2023-02-14T14:20:51.820265Z\",\n    \"updated_at\": \"2023-02-14T14:20:51.820343Z\",\n    \"name\": \"pizza\",\n    \"contents\": \"test\",\n    \"price\": 60000,\n    \"store\": \"3379828f-2c11-4edd-8634-9cf881b0d79b\",\n    \"img\": \"74607bdb-903a-4421-8756-02c02701cc76\"\n}"
+				}
+			]
+		},
+		{
+			"name": "List Food",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc2Mzg5Nzc3LCJpYXQiOjE2NzYzODQyMjcsImp0aSI6IjIzYmZjNjdhMmFjNTRhOTdiNmFmNTcyYjk3ZjI2NGZlIiwidXNlcl9pZCI6ImY2OGUzODNjLTMyNWQtNDcwOS04MmUyLTk1Y2ZiY2YzYWVhZSJ9.JxwJAsFZdlquuGyWjSvNIAa2Row7lEaUmVhxteeckl0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/food/list/3379828f-2c11-4edd-8634-9cf881b0d79b/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"food",
+						"list",
+						"3379828f-2c11-4edd-8634-9cf881b0d79b",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "List Food",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/food/list/3379828f-2c11-4edd-8634-9cf881b0d79b/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"food",
+								"list",
+								"3379828f-2c11-4edd-8634-9cf881b0d79b",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 14 Feb 2023 16:40:50 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "640"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"f7f4df8d-e328-4c62-b4b7-9bdab9612d87\",\n        \"img\": \"http://dl.rpniaz.ir/images/image_ff7fce8b-8ccc-400b-aec0-f07a6ae0c5ca.jpg\",\n        \"store\": {\n            \"name\": \"ass\",\n            \"phone\": \"12222\",\n            \"category\": \"reza\"\n        },\n        \"created_at\": \"2023-02-14T16:38:49.310050Z\",\n        \"updated_at\": \"2023-02-14T16:38:49.310105Z\",\n        \"name\": \"pizza\",\n        \"contents\": \"test\",\n        \"price\": 60000\n    },\n    {\n        \"id\": \"dc9948e9-ac3b-428a-8ee0-f8bb64a8850a\",\n        \"img\": \"http://dl.rpniaz.ir/images/image_18a7d636-1881-450b-8958-a8b09c2fa7ab.jpg\",\n        \"store\": {\n            \"name\": \"ass\",\n            \"phone\": \"12222\",\n            \"category\": \"reza\"\n        },\n        \"created_at\": \"2023-02-14T16:40:23.195434Z\",\n        \"updated_at\": \"2023-02-14T16:40:23.195507Z\",\n        \"name\": \"Chicken\",\n        \"contents\": \"test\",\n        \"price\": 100000\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "detail food",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc2NDYxNjE2LCJpYXQiOjE2NzYzODQyMjcsImp0aSI6IjU5MDQxM2RlZjdmMzRlYmU4MTZlYTQwZGNhZGI5NGE5IiwidXNlcl9pZCI6ImY2OGUzODNjLTMyNWQtNDcwOS04MmUyLTk1Y2ZiY2YzYWVhZSJ9._v4n2WHVRKv22crqcKC6M-uHVCya02035nruRSHLDUU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/food/detail/f7f4df8d-e328-4c62-b4b7-9bdab9612d87/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"food",
+						"detail",
+						"f7f4df8d-e328-4c62-b4b7-9bdab9612d87",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "detail food",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/food/detail/f7f4df8d-e328-4c62-b4b7-9bdab9612d87/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"food",
+								"detail",
+								"f7f4df8d-e328-4c62-b4b7-9bdab9612d87",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 15 Feb 2023 11:42:40 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "322"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"f7f4df8d-e328-4c62-b4b7-9bdab9612d87\",\n    \"img\": \"http://dl.rpniaz.ir/images/image_ff7fce8b-8ccc-400b-aec0-f07a6ae0c5ca.jpg\",\n    \"store\": {\n        \"name\": \"update\",\n        \"phone\": \"0918222\",\n        \"category\": \"reza\"\n    },\n    \"created_at\": \"2023-02-14T16:38:49.310050Z\",\n    \"updated_at\": \"2023-02-14T16:38:49.310105Z\",\n    \"name\": \"pizza\",\n    \"contents\": \"test\",\n    \"price\": 60000\n}"
+				}
+			]
+		},
+		{
+			"name": "update food",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc2NDYxNjE2LCJpYXQiOjE2NzYzODQyMjcsImp0aSI6IjU5MDQxM2RlZjdmMzRlYmU4MTZlYTQwZGNhZGI5NGE5IiwidXNlcl9pZCI6ImY2OGUzODNjLTMyNWQtNDcwOS04MmUyLTk1Y2ZiY2YzYWVhZSJ9._v4n2WHVRKv22crqcKC6M-uHVCya02035nruRSHLDUU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "pizza",
+							"type": "default"
+						},
+						{
+							"key": "contents",
+							"value": "test",
+							"type": "default"
+						},
+						{
+							"key": "price",
+							"value": "120000",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/food/detail/f7f4df8d-e328-4c62-b4b7-9bdab9612d87/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"food",
+						"detail",
+						"f7f4df8d-e328-4c62-b4b7-9bdab9612d87",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "update food",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "pizza",
+									"type": "default"
+								},
+								{
+									"key": "contents",
+									"value": "test",
+									"type": "default"
+								},
+								{
+									"key": "price",
+									"value": "120000",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/food/detail/f7f4df8d-e328-4c62-b4b7-9bdab9612d87/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"food",
+								"detail",
+								"f7f4df8d-e328-4c62-b4b7-9bdab9612d87",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 15 Feb 2023 11:44:14 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "271"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"f7f4df8d-e328-4c62-b4b7-9bdab9612d87\",\n    \"created_at\": \"2023-02-14T16:38:49.310050Z\",\n    \"updated_at\": \"2023-02-15T11:44:14.485574Z\",\n    \"name\": \"pizza\",\n    \"contents\": \"test\",\n    \"price\": 120000,\n    \"store\": \"3379828f-2c11-4edd-8634-9cf881b0d79b\",\n    \"img\": \"ff7fce8b-8ccc-400b-aec0-f07a6ae0c5ca\"\n}"
+				}
+			]
+		},
+		{
+			"name": "delete food",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc2NDYxNjE2LCJpYXQiOjE2NzYzODQyMjcsImp0aSI6IjU5MDQxM2RlZjdmMzRlYmU4MTZlYTQwZGNhZGI5NGE5IiwidXNlcl9pZCI6ImY2OGUzODNjLTMyNWQtNDcwOS04MmUyLTk1Y2ZiY2YzYWVhZSJ9._v4n2WHVRKv22crqcKC6M-uHVCya02035nruRSHLDUU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/food/detail/f7f4df8d-e328-4c62-b4b7-9bdab9612d87/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"food",
+						"detail",
+						"f7f4df8d-e328-4c62-b4b7-9bdab9612d87",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "delete food",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/food/detail/f7f4df8d-e328-4c62-b4b7-9bdab9612d87/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"food",
+								"detail",
+								"f7f4df8d-e328-4c62-b4b7-9bdab9612d87",
+								""
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 15 Feb 2023 11:45:10 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.6"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "upload image",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc2MzkwMTM2LCJpYXQiOjE2NzYzODQyMjcsImp0aSI6IjY4ZjVjNzA0YjE1MzQxODQ4NGNkM2NhYjg0ZGZmOTBkIiwidXNlcl9pZCI6ImY2OGUzODNjLTMyNWQtNDcwOS04MmUyLTk1Y2ZiY2YzYWVhZSJ9.dRMO_mHJ0Rhlupcu_u9e9k_L4pYSOWGVn9X3TSt9K6g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"contentType": "",
+							"type": "file",
+							"src": "/home/reza/Pictures/Webcam/2023-02-14-190804.jpg"
+						},
+						{
+							"key": "alt",
+							"value": "\"test\"",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "\"test\"",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/utils/images/upload/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"utils",
+						"images",
+						"upload",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "upload image",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"contentType": "",
+									"type": "file",
+									"src": "/home/reza/Pictures/Webcam/2023-02-14-190804.jpg"
+								},
+								{
+									"key": "alt",
+									"value": "test",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "test",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/utils/images/upload/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"utils",
+								"images",
+								"upload",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 14 Feb 2023 16:51:43 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "249"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"bff3e444-847b-414a-8281-f1f36adcd05b\",\n    \"image\": \"http://dl.rpniaz.ir/images/image_bff3e444-847b-414a-8281-f1f36adcd05b.jpg\",\n    \"created_at\": \"2023-02-14T16:51:39.345516Z\",\n    \"updated_at\": \"2023-02-14T16:51:39.345586Z\",\n    \"alt\": \"test\",\n    \"description\": \"test\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Create Order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc2Mzk4MjczLCJpYXQiOjE2NzYzODQyMjcsImp0aSI6IjE5YTFlNTE5MjNmZjRmOTE4Zjg4MmEwMzc4ZDg1MjRhIiwidXNlcl9pZCI6ImY2OGUzODNjLTMyNWQtNDcwOS04MmUyLTk1Y2ZiY2YzYWVhZSJ9.mb4aA67y-kqz6wrVeCrtCmC-ykUen3_RHf9r_1qAHkY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "location",
+							"value": "d85580ee-ed33-4aef-badc-d4085bc3b15c",
+							"type": "default"
+						},
+						{
+							"key": "store",
+							"value": "3379828f-2c11-4edd-8634-9cf881b0d79b",
+							"type": "default"
+						},
+						{
+							"key": "items_price",
+							"value": "1500000",
+							"type": "default"
+						},
+						{
+							"key": "delivery_price",
+							"value": "10000",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/payments/order/create/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"payments",
+						"order",
+						"create",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create Order",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "location",
+									"value": "d85580ee-ed33-4aef-badc-d4085bc3b15c",
+									"type": "default"
+								},
+								{
+									"key": "store",
+									"value": "3379828f-2c11-4edd-8634-9cf881b0d79b",
+									"type": "default"
+								},
+								{
+									"key": "items_price",
+									"value": "150000",
+									"type": "default"
+								},
+								{
+									"key": "delivery_price",
+									"value": "10000",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/payments/order/create/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"payments",
+								"order",
+								"create",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 14 Feb 2023 17:28:52 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "287"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"b3c6e4b3-6fe7-474e-9622-3a0608e9b70a\",\n    \"created_at\": \"2023-02-14T17:28:52.782908Z\",\n    \"updated_at\": \"2023-02-14T17:28:52.782972Z\",\n    \"items_price\": 150000,\n    \"delivery_price\": 10000,\n    \"location\": \"d85580ee-ed33-4aef-badc-d4085bc3b15c\",\n    \"store\": \"3379828f-2c11-4edd-8634-9cf881b0d79b\",\n    \"payment\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "order detail",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc2Mzk4MjczLCJpYXQiOjE2NzYzODQyMjcsImp0aSI6IjE5YTFlNTE5MjNmZjRmOTE4Zjg4MmEwMzc4ZDg1MjRhIiwidXNlcl9pZCI6ImY2OGUzODNjLTMyNWQtNDcwOS04MmUyLTk1Y2ZiY2YzYWVhZSJ9.mb4aA67y-kqz6wrVeCrtCmC-ykUen3_RHf9r_1qAHkY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/payments/order/detail/b3c6e4b3-6fe7-474e-9622-3a0608e9b70a/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"payments",
+						"order",
+						"detail",
+						"b3c6e4b3-6fe7-474e-9622-3a0608e9b70a",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "order detail",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/payments/order/detail/b3c6e4b3-6fe7-474e-9622-3a0608e9b70a/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"payments",
+								"order",
+								"detail",
+								"b3c6e4b3-6fe7-474e-9622-3a0608e9b70a",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 14 Feb 2023 18:06:28 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "299"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"b3c6e4b3-6fe7-474e-9622-3a0608e9b70a\",\n    \"user\": \"reza\",\n    \"location\": {\n        \"lat\": 0.000003,\n        \"long\": 0.000004\n    },\n    \"store\": {\n        \"name\": \"ass\",\n        \"phone\": \"12222\",\n        \"category\": \"reza\"\n    },\n    \"created_at\": \"2023-02-14T17:28:52.782908Z\",\n    \"updated_at\": \"2023-02-14T17:55:33.971891Z\",\n    \"items_price\": 125000,\n    \"delivery_price\": 10000,\n    \"payment\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "update order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc2NTUzOTgxLCJpYXQiOjE2NzY1NDYzOTEsImp0aSI6IjUyN2IyMzk4Mzg5ZTRjYzFhN2JjYjVjYTlkMTc4MWFmIiwidXNlcl9pZCI6ImY2OGUzODNjLTMyNWQtNDcwOS04MmUyLTk1Y2ZiY2YzYWVhZSJ9.eyT9Ly4PFtSgE_ViiQkSU2_ql3slz1er3LSx4IiBL_c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "delivery_price",
+							"value": "2",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/payments/order/update/b3c6e4b3-6fe7-474e-9622-3a0608e9b70a/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"payments",
+						"order",
+						"update",
+						"b3c6e4b3-6fe7-474e-9622-3a0608e9b70a",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "update order",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "delivery_price",
+									"value": "10000",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/payments/order/update/b3c6e4b3-6fe7-474e-9622-3a0608e9b70a/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"payments",
+								"order",
+								"update",
+								"b3c6e4b3-6fe7-474e-9622-3a0608e9b70a",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 16 Feb 2023 13:20:10 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "333"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"b3c6e4b3-6fe7-474e-9622-3a0608e9b70a\",\n    \"created_at\": \"2023-02-14T17:28:52.782908Z\",\n    \"updated_at\": \"2023-02-16T13:20:10.777034Z\",\n    \"items_price\": 700000,\n    \"delivery_price\": 10000,\n    \"user\": \"f68e383c-325d-4709-82e2-95cfbcf3aeae\",\n    \"location\": \"d85580ee-ed33-4aef-badc-d4085bc3b15c\",\n    \"store\": \"3379828f-2c11-4edd-8634-9cf881b0d79b\",\n    \"payment\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "delete order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc2Mzk4MjczLCJpYXQiOjE2NzYzODQyMjcsImp0aSI6IjE5YTFlNTE5MjNmZjRmOTE4Zjg4MmEwMzc4ZDg1MjRhIiwidXNlcl9pZCI6ImY2OGUzODNjLTMyNWQtNDcwOS04MmUyLTk1Y2ZiY2YzYWVhZSJ9.mb4aA67y-kqz6wrVeCrtCmC-ykUen3_RHf9r_1qAHkY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/payments/order/update/2a91f62d-a216-4502-9fb6-c7ce3431098a/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"payments",
+						"order",
+						"update",
+						"2a91f62d-a216-4502-9fb6-c7ce3431098a",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "delete order",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/payments/order/update/2a91f62d-a216-4502-9fb6-c7ce3431098a/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"payments",
+								"order",
+								"update",
+								"2a91f62d-a216-4502-9fb6-c7ce3431098a",
+								""
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 14 Feb 2023 18:08:55 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.6"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Add order item",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc2NTUzNjcxLCJpYXQiOjE2NzY1NDYzOTEsImp0aSI6IjNkZDUwOTc1MWM2OTQyZTBiMGYwMGU1M2NiOTEwNDliIiwidXNlcl9pZCI6ImY2OGUzODNjLTMyNWQtNDcwOS04MmUyLTk1Y2ZiY2YzYWVhZSJ9.x0hKYdijIP2QoTa_FV4qGVXn9tUltVj2KAR-uOk-_f0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "food",
+							"value": "dc9948e9-ac3b-428a-8ee0-f8bb64a8850a",
+							"type": "default"
+						},
+						{
+							"key": "number",
+							"value": "1",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/payments/order-item/add/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"payments",
+						"order-item",
+						"add",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add order item",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "food",
+									"value": "dc9948e9-ac3b-428a-8ee0-f8bb64a8850a",
+									"type": "default"
+								},
+								{
+									"key": "number",
+									"value": "1",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/payments/order-item/add/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"payments",
+								"order-item",
+								"add",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 16 Feb 2023 13:20:40 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "235"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"0b5b0dc2-9361-4370-aa93-f9eddba0c867\",\n    \"created_at\": \"2023-02-16T13:20:40.305553Z\",\n    \"updated_at\": \"2023-02-16T13:20:40.305615Z\",\n    \"number\": 1,\n    \"order\": \"b3c6e4b3-6fe7-474e-9622-3a0608e9b70a\",\n    \"food\": \"dc9948e9-ac3b-428a-8ee0-f8bb64a8850a\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Order Item",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc2NTYxMzk2LCJpYXQiOjE2NzY1NDYzOTEsImp0aSI6IjFlYjUzNTk1MTQ0YjQ3Yzc5YjI2ODQyMzMzNWEyMjlmIiwidXNlcl9pZCI6ImY2OGUzODNjLTMyNWQtNDcwOS04MmUyLTk1Y2ZiY2YzYWVhZSJ9.Q92mVY5M_jcvhMVfn354Ha_DG5NOAWrdjPpG106cM9I",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "number",
+							"value": "2",
+							"type": "default"
+						},
+						{
+							"key": "food",
+							"value": "dc9948e9-ac3b-428a-8ee0-f8bb64a8850a",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/payments/order-item/update/0b5b0dc2-9361-4370-aa93-f9eddba0c867/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"payments",
+						"order-item",
+						"update",
+						"0b5b0dc2-9361-4370-aa93-f9eddba0c867",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update Order Item",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "number",
+									"value": "2",
+									"type": "default"
+								},
+								{
+									"key": "food",
+									"value": "dc9948e9-ac3b-428a-8ee0-f8bb64a8850a",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/payments/order-item/update/0b5b0dc2-9361-4370-aa93-f9eddba0c867/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"payments",
+								"order-item",
+								"update",
+								"0b5b0dc2-9361-4370-aa93-f9eddba0c867",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 16 Feb 2023 15:26:20 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "PUT, PATCH, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "235"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"0b5b0dc2-9361-4370-aa93-f9eddba0c867\",\n    \"created_at\": \"2023-02-16T13:20:40.305553Z\",\n    \"updated_at\": \"2023-02-16T15:26:20.671510Z\",\n    \"number\": 2,\n    \"order\": \"b3c6e4b3-6fe7-474e-9622-3a0608e9b70a\",\n    \"food\": \"dc9948e9-ac3b-428a-8ee0-f8bb64a8850a\"\n}"
+				}
+			]
+		},
+		{
+			"name": "delete order Item",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc2NTYxNjQ1LCJpYXQiOjE2NzY1NDYzOTEsImp0aSI6IjAxYTE3NjFkM2E1ZTQxMjRiOWM4M2UyZDliYWVmNzc0IiwidXNlcl9pZCI6ImY2OGUzODNjLTMyNWQtNDcwOS04MmUyLTk1Y2ZiY2YzYWVhZSJ9.FUqcOCV7598_TvRCM7QvdExjXY5cWcbmPysmqYdARA8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/payments/order-item/delete/0b5b0dc2-9361-4370-aa93-f9eddba0c867/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"payments",
+						"order-item",
+						"delete",
+						"0b5b0dc2-9361-4370-aa93-f9eddba0c867",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "delete order Item",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/payments/order-item/delete/0b5b0dc2-9361-4370-aa93-f9eddba0c867/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"payments",
+								"order-item",
+								"delete",
+								"0b5b0dc2-9361-4370-aa93-f9eddba0c867",
+								""
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 16 Feb 2023 15:29:40 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.6"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "DELETE, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Add comment",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc2NzE4MzUyLCJpYXQiOjE2NzY3MTQwMTUsImp0aSI6ImU4YjIyZGUwODYyZjQ1MThiNjE2MTk5MzMyYzdiMjQzIiwidXNlcl9pZCI6ImY2OGUzODNjLTMyNWQtNDcwOS04MmUyLTk1Y2ZiY2YzYWVhZSJ9.RwcIq_JB90-w0aQU4Lhbv8gPL7vwPieT6rFvT6dgZZs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "text",
+							"value": "new comment",
+							"type": "default"
+						},
+						{
+							"key": "order",
+							"value": "b3c6e4b3-6fe7-474e-9622-3a0608e9b70a",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/payments/order/comment/add/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"payments",
+						"order",
+						"comment",
+						"add",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add comment",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "text",
+									"value": "test comment",
+									"type": "default"
+								},
+								{
+									"key": "order",
+									"value": "5d50b5d8-26af-40c7-a5d7-7053280dc87e",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/payments/order/comment/add/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"payments",
+								"order",
+								"comment",
+								"add",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 18 Feb 2023 10:20:27 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "200"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"d4b128c8-4213-4f65-ab8f-3392e8b8b965\",\n    \"created_at\": \"2023-02-18T10:20:27.946690Z\",\n    \"updated_at\": \"2023-02-18T10:20:27.946748Z\",\n    \"text\": \"test comment\",\n    \"order\": \"b3c6e4b3-6fe7-474e-9622-3a0608e9b70a\"\n}"
+				}
+			]
+		},
+		{
+			"name": "List Comments",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc2NzE4MzUyLCJpYXQiOjE2NzY3MTQwMTUsImp0aSI6ImU4YjIyZGUwODYyZjQ1MThiNjE2MTk5MzMyYzdiMjQzIiwidXNlcl9pZCI6ImY2OGUzODNjLTMyNWQtNDcwOS04MmUyLTk1Y2ZiY2YzYWVhZSJ9.RwcIq_JB90-w0aQU4Lhbv8gPL7vwPieT6rFvT6dgZZs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/payments/order/comment/list/b3c6e4b3-6fe7-474e-9622-3a0608e9b70a/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"payments",
+						"order",
+						"comment",
+						"list",
+						"b3c6e4b3-6fe7-474e-9622-3a0608e9b70a",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "List Comments",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/payments/order/comment/list/b3c6e4b3-6fe7-474e-9622-3a0608e9b70a/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"payments",
+								"order",
+								"comment",
+								"list",
+								"b3c6e4b3-6fe7-474e-9622-3a0608e9b70a",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 18 Feb 2023 11:04:17 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "387"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"d4b128c8-4213-4f65-ab8f-3392e8b8b965\",\n        \"order\": \"b3c6e4b3-6fe7-474e-9622-3a0608e9b70a\",\n        \"text\": \"test comment\",\n        \"user\": \"reza\"\n    },\n    {\n        \"id\": \"9094113a-ca52-4ded-8029-544295cf0c5d\",\n        \"order\": \"b3c6e4b3-6fe7-474e-9622-3a0608e9b70a\",\n        \"text\": \"test comment\",\n        \"user\": \"reza\"\n    },\n    {\n        \"id\": \"b86cd286-43d9-4530-ac26-629a851dd77a\",\n        \"order\": \"b3c6e4b3-6fe7-474e-9622-3a0608e9b70a\",\n        \"text\": \"new comment\",\n        \"user\": \"reza\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "list orders for store owner",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc2OTIxNTE0LCJpYXQiOjE2NzY5MjExOTYsImp0aSI6ImIzZjhmZDRhYWQwZDRmZTA4YjcxMGJhNmU0Yjc1ZmMyIiwidXNlcl9pZCI6ImY2OGUzODNjLTMyNWQtNDcwOS04MmUyLTk1Y2ZiY2YzYWVhZSJ9.rWW-_22-I5ebsdz8n2XyK1Zm4JzowSvShcZsMsnNkbY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/store/orders/list/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"store",
+						"orders",
+						"list",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "list orders for store owner",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/store/orders/list/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"store",
+								"orders",
+								"list",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 20 Feb 2023 19:27:21 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "715"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"b3c6e4b3-6fe7-474e-9622-3a0608e9b70a\",\n        \"user\": [\n            \"reza\",\n            null\n        ],\n        \"created_at\": \"2023-02-14T17:28:52.782908Z\",\n        \"updated_at\": \"2023-02-18T10:00:27.349654Z\",\n        \"items_price\": 300000,\n        \"delivery_price\": 2,\n        \"order_status\": \"AC\",\n        \"location\": \"d85580ee-ed33-4aef-badc-d4085bc3b15c\",\n        \"store\": \"21424371-8c5b-4e11-a6dd-92304345fee8\",\n        \"payment\": \"fa4e3ec8-d2b5-4693-8689-67cbbc155385\"\n    },\n    {\n        \"id\": \"5d50b5d8-26af-40c7-a5d7-7053280dc87e\",\n        \"user\": [\n            \"admin\",\n            null\n        ],\n        \"created_at\": \"2023-02-18T10:20:57.120882Z\",\n        \"updated_at\": \"2023-02-18T10:20:57.120936Z\",\n        \"items_price\": 0,\n        \"delivery_price\": 2,\n        \"order_status\": \"AC\",\n        \"location\": \"d85580ee-ed33-4aef-badc-d4085bc3b15c\",\n        \"store\": \"21424371-8c5b-4e11-a6dd-92304345fee8\",\n        \"payment\": \"fa4e3ec8-d2b5-4693-8689-67cbbc155385\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "change order status fot store owner",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc2OTIxNTE0LCJpYXQiOjE2NzY5MjExOTYsImp0aSI6ImIzZjhmZDRhYWQwZDRmZTA4YjcxMGJhNmU0Yjc1ZmMyIiwidXNlcl9pZCI6ImY2OGUzODNjLTMyNWQtNDcwOS04MmUyLTk1Y2ZiY2YzYWVhZSJ9.rWW-_22-I5ebsdz8n2XyK1Zm4JzowSvShcZsMsnNkbY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "order_status",
+							"value": "SC",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/store/order/change-status/b3c6e4b3-6fe7-474e-9622-3a0608e9b70a/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"store",
+						"order",
+						"change-status",
+						"b3c6e4b3-6fe7-474e-9622-3a0608e9b70a",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "change order status fot store owner",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "order_status",
+									"value": "SC",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/store/order/change-status/b3c6e4b3-6fe7-474e-9622-3a0608e9b70a/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"store",
+								"order",
+								"change-status",
+								"b3c6e4b3-6fe7-474e-9622-3a0608e9b70a",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 20 Feb 2023 19:31:34 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "PUT, PATCH, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "383"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"b3c6e4b3-6fe7-474e-9622-3a0608e9b70a\",\n    \"created_at\": \"2023-02-14T17:28:52.782908Z\",\n    \"updated_at\": \"2023-02-20T19:31:34.344612Z\",\n    \"items_price\": 300000,\n    \"delivery_price\": 2,\n    \"order_status\": \"SC\",\n    \"user\": \"f68e383c-325d-4709-82e2-95cfbcf3aeae\",\n    \"location\": \"d85580ee-ed33-4aef-badc-d4085bc3b15c\",\n    \"store\": \"21424371-8c5b-4e11-a6dd-92304345fee8\",\n    \"payment\": \"fa4e3ec8-d2b5-4693-8689-67cbbc155385\"\n}"
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer"
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
